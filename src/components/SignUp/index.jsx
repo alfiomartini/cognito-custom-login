@@ -3,10 +3,14 @@ import { Button } from "../Button";
 import { useState } from "react";
 import passwordValidator from "password-validator";
 import { Token } from "../Token";
+import { signUp } from "../../utils";
 
-async function signUp(email, password) {
+async function doSignUp(email, password) {
   let signedUp = false;
   try {
+    const resp = await signUp(email, password);
+    console.log("signed resp", resp);
+    signedUp = true;
   } catch (error) {
     console.log("error signing up:", error);
   }
@@ -54,7 +58,7 @@ export const SignUp = () => {
       alert("Password must contain letter and digits. Minimum length: 8");
       return;
     }
-    const signedUp = await signUp(email, password);
+    const signedUp = await doSignUp(email, password);
     if (!signedUp) {
       alert("Problem with signUp.");
     } else {

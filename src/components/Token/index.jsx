@@ -2,10 +2,12 @@ import React from "react";
 import { Button } from "../Button";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { confirmSignUp } from "../../utils";
 
-async function confirmSignUp(email, token) {
+async function doConfirmSignUp(email, token) {
   let confirm = false;
   try {
+    await confirmSignUp(email, token);
     confirm = true;
   } catch (error) {
     console.log("error confirming sign up", error);
@@ -28,8 +30,8 @@ export const Token = ({ email }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const confirmPwd = await confirmSignUp(email, token);
-    if (confirmPwd) {
+    const confirmSignUp = await doConfirmSignUp(email, token);
+    if (confirmSignUp) {
       alert("Sign up successful");
       history.push("/signIn");
     } else {
