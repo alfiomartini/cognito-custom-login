@@ -13,7 +13,6 @@ function App() {
 
   const doSignOut = async () => {
     const token = user.RefreshToken;
-    console.log("refresh token", token);
     await signOut(token);
     setUser(null);
     history.push("/");

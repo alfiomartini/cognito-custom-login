@@ -8,8 +8,7 @@ import { signUp } from "../../utils";
 async function doSignUp(email, password) {
   let signedUp = false;
   try {
-    const resp = await signUp(email, password);
-    console.log("signed resp", resp);
+    await signUp(email, password);
     signedUp = true;
   } catch (error) {
     console.log("error signing up:", error);

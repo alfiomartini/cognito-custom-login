@@ -13,11 +13,8 @@ async function signIn(email, password) {
   let user = null;
   try {
     const resp = await doSignIn(email, password);
-    console.log("resp", resp);
     user = resp?.data?.AuthenticationResult;
-    console.log("user signed in", user);
   } catch (error) {
-    console.log("error signing in", error);
     user = null;
   }
   return user;
@@ -55,7 +52,6 @@ export const SignIn = ({ setUser }) => {
       alert("Error with signIn");
       return;
     }
-    console.log("user", user);
     setUser(user);
     history.push("/");
     clear();
