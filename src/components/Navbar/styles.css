@@ -19,3 +19,11 @@
   text-decoration: none;
   color: whitesmoke;
 }
+
+.link:hover {
+  color: lightgreen;
+}
+
+.auth-user {
+  margin-left: auto;
+}
