@@ -10,7 +10,7 @@ export const Navbar = ({ user, doSignOut }) => {
 
   return (
     <div className="navbar">
-      <div className="logo">AWS-Cognito</div>
+      <div className="logo">Cognito-Custom-UI</div>
 
       {!user && (
         <Link to="/signIn" className="link">

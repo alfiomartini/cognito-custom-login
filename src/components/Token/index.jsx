@@ -33,7 +33,7 @@ export const Token = ({ email }) => {
     const confirmSignUp = await doConfirmSignUp(email, token);
     if (confirmSignUp) {
       alert("Sign up successful");
-      history.push("/signIn");
+      history.replace("/signIn");
     } else {
       alert("Confirmation unsuccessful. Type code again.");
     }

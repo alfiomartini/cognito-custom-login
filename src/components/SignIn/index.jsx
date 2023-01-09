@@ -51,7 +51,11 @@ export const SignIn = ({ setUser }) => {
       alert("Error with signIn");
       return;
     }
-    setUser(user);
+    setUser({
+      access_token: user.AccessToken,
+      id_token: user.IdToken,
+      refresh_token: user.RefreshToken,
+    });
     history.push("/");
     clear();
   };

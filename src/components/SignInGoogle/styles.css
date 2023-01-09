@@ -1,0 +1,33 @@
+.google-signIn {
+  display: flex;
+  flex-direction: row;
+  /* height: 60px; */
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid blue;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 435px;
+}
+
+.google-signIn > span {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-google {
+  padding: 10px 0px;
+  color: whitesmoke;
+  background-color: blue;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  width: 395px;
+  text-align: center;
+}
+
+.btn-google:hover {
+  background-color: navy;
+  color: whitesmoke;
+}
