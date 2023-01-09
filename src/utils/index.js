@@ -7,7 +7,7 @@ export const RESPONSE_TYPE = "code";
 export const SCOPE = "phone+email+openid+aws.cognito.signin.user.admin+profile";
 export const REDIRECT_URI_DEV = "http://localhost:3000/loading";
 export const REDIRECT_URI_PROD =
-  "https://alfiomartini.github.io/cognito-hosted-ui/loading";
+  "https://alfiomartini.github.io/cognito-custom-ui/loading";
 
 export const REDIRECT_URI =
   process.env.NODE_ENV === "development" ? REDIRECT_URI_DEV : REDIRECT_URI_PROD;
