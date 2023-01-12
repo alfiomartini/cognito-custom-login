@@ -49,6 +49,7 @@ export const SignIn = ({ setUser }) => {
     const user = await signIn(email, password);
     if (!user) {
       alert("Error with signIn");
+      console.log("user error", user);
       return;
     }
     setUser({

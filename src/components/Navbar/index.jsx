@@ -23,7 +23,7 @@ export const Navbar = ({ user, doSignOut }) => {
         </Link>
       )}
       {user && (
-        <Link to="/signIn" className="link" onClick={() => doSignOut()}>
+        <Link to="/" className="link" onClick={() => doSignOut()}>
           Sign Out
         </Link>
       )}

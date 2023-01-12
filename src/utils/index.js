@@ -2,10 +2,10 @@ import axios from "axios";
 
 export const COGNITO_BASE_URL =
   "https://bultin-login.auth.sa-east-1.amazoncognito.com";
-export const CLIENT_ID = "1l1pg2a87u7agm14jh6loovrbh";
+export const CLIENT_ID = "7k7tburvb5l8j3kd5lnlku377";
 export const RESPONSE_TYPE = "code";
 export const SCOPE = "phone+email+openid+aws.cognito.signin.user.admin+profile";
-export const REDIRECT_URI_DEV = "http://localhost:3000/loading";
+export const REDIRECT_URI_DEV = "http://localhost:3010/loading";
 export const REDIRECT_URI_PROD =
   "https://alfiomartini.github.io/cognito-custom-ui/loading";
 
@@ -24,7 +24,7 @@ export const doSignIn = async (email, password) => {
       PASSWORD: password,
     },
     AuthFlow: "USER_PASSWORD_AUTH",
-    ClientId: "1l1pg2a87u7agm14jh6loovrbh",
+    ClientId: "7k7tburvb5l8j3kd5lnlku377",
   };
 
   const headers = {
@@ -39,7 +39,7 @@ export const doSignIn = async (email, password) => {
 export const signOut = async (token) => {
   const body = {
     Token: token,
-    ClientId: "1l1pg2a87u7agm14jh6loovrbh",
+    ClientId: "7k7tburvb5l8j3kd5lnlku377",
   };
 
   const headers = {
@@ -53,7 +53,7 @@ export const signOut = async (token) => {
 
 export const signUp = async (email, password) => {
   const body = {
-    ClientId: "1l1pg2a87u7agm14jh6loovrbh",
+    ClientId: "7k7tburvb5l8j3kd5lnlku377",
     Password: password,
     UserAttributes: [
       {
@@ -75,7 +75,7 @@ export const signUp = async (email, password) => {
 
 export const confirmSignUp = (email, token) => {
   const body = {
-    ClientId: "1l1pg2a87u7agm14jh6loovrbh",
+    ClientId: "7k7tburvb5l8j3kd5lnlku377",
     ConfirmationCode: token,
     Username: email,
   };
